@@ -1,0 +1,13 @@
+[project]
+name = "flink-exp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.10.9"
+dependencies = [
+    "apache-flink==1.17.2",
+    "setuptools>=80.9.0",
+]
+[[tool.uv.index]]
+name = "bfsu"
+url = "http://mirrors.cloud.aliyuncs.com/pypi/simple/"
