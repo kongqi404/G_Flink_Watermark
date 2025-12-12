@@ -1,0 +1,79 @@
+flink run \
+    -pyexec /root/flink_exp/.venv/bin/python \
+    -pyclientexec /root/flink_exp/.venv/bin/python \
+    -py /root/flink_exp/exp.py \
+    --watermarkDelayMs 2000 \
+    --windowSizeMs 5000 \
+    --windowSlideMs 5000 \
+    --allowedLatenessMs 0 \
+    --windowType tumbling \
+    --eventsPerSecond 5000 \
+    --runDurationMs 60000 \
+    --maxOutOfOrdernessMs 5000 \
+    --lateEventFraction 0.2 \
+    --severeLatenessUpperBoundMs 5000 \
+    --parallelism 1 \
+    --autoWatermarkIntervalMs 200 \
+    --enableCheckpointing false \
+    --checkpointIntervalMs 10000 \
+    --outputDir s3://flink-bucket/para_1/
+
+flink run \
+    -pyexec /root/flink_exp/.venv/bin/python \
+    -pyclientexec /root/flink_exp/.venv/bin/python \
+    -py /root/flink_exp/exp.py \
+    --watermarkDelayMs 2000 \
+    --windowSizeMs 5000 \
+    --windowSlideMs 5000 \
+    --allowedLatenessMs 0 \
+    --windowType tumbling \
+    --eventsPerSecond 5000 \
+    --runDurationMs 60000 \
+    --maxOutOfOrdernessMs 5000 \
+    --lateEventFraction 0.2 \
+    --severeLatenessUpperBoundMs 5000 \
+    --parallelism 2 \
+    --autoWatermarkIntervalMs 200 \
+    --enableCheckpointing false \
+    --checkpointIntervalMs 10000 \
+    --outputDir s3://flink-bucket/para_2/
+
+flink run \
+    -pyexec /root/flink_exp/.venv/bin/python \
+    -pyclientexec /root/flink_exp/.venv/bin/python \
+    -py /root/flink_exp/exp.py \
+    --watermarkDelayMs 2000 \
+    --windowSizeMs 5000 \
+    --windowSlideMs 5000 \
+    --allowedLatenessMs 0 \
+    --windowType tumbling \
+    --eventsPerSecond 5000 \
+    --runDurationMs 60000 \
+    --maxOutOfOrdernessMs 5000 \
+    --lateEventFraction 0.2 \
+    --severeLatenessUpperBoundMs 5000 \
+    --parallelism 4 \
+    --autoWatermarkIntervalMs 200 \
+    --enableCheckpointing false \
+    --checkpointIntervalMs 10000 \
+    --outputDir s3://flink-bucket/para_4/
+
+flink run \
+    -pyexec /root/flink_exp/.venv/bin/python \
+    -pyclientexec /root/flink_exp/.venv/bin/python \
+    -py /root/flink_exp/exp.py \
+    --watermarkDelayMs 2000 \
+    --windowSizeMs 5000 \
+    --windowSlideMs 5000 \
+    --allowedLatenessMs 0 \
+    --windowType tumbling \
+    --eventsPerSecond 5000 \
+    --runDurationMs 60000 \
+    --maxOutOfOrdernessMs 5000 \
+    --lateEventFraction 0.2 \
+    --severeLatenessUpperBoundMs 5000 \
+    --parallelism 6 \
+    --autoWatermarkIntervalMs 200 \
+    --enableCheckpointing false \
+    --checkpointIntervalMs 10000 \
+    --outputDir s3://flink-bucket/para_6/
